@@ -1,0 +1,594 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif !important;
+  margin: 0;
+  transition: all 0.1s;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #f5f8fa;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* main css */
+
+/* TEST EXTRACT */
+.page-container {
+  padding-inline-start: 220px;
+  padding-inline-end: 240px;
+  padding-block-start: 85px;
+  padding-block-end: 0px;
+  /* max-width: 1440px; */
+  /* height: 1170px; */
+}
+
+.nav-logo-container {
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  padding-block-start: 30px;
+  padding-block-end: 0px;
+}
+
+.logo-container {
+  width: 200px;
+  height: 39px;
+  flex-shrink: 0;
+  background-image: url("/media/pusher-logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  color: #1d2c3c;
+  position: relative;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01px;
+}
+
+.nav-logo-container li > a:hover {
+  outline: 2px solid #646e7a;
+  border-radius: 0.5px;
+  outline-offset: 10px;
+}
+
+.nav-container ul li:nth-child(2) {
+  margin-left: 42px;
+}
+
+.nav-container ul li:nth-child(3) {
+  margin-left: 44px;
+}
+
+.nav-container ul li:nth-child(4) {
+  margin-left: 46px;
+}
+
+.nav-container ul li:nth-child(5) {
+  margin-left: 43px;
+}
+
+select {
+  text-decoration: none;
+  color: #1d2c3c;
+  font-size: 14px;
+  width: 200px;
+}
+
+#mobile-nav-dropdown option {
+  font-size: 10px !important;
+  /* width: 100px !important; */
+}
+
+#page-line hr {
+  width: unset;
+  flex-shrink: 0;
+  border: 2px solid #e0e6ea;
+  margin-inline-start: 42px;
+  margin-inline-end: 40px;
+}
+
+.content-box {
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0 auto;
+  width: 100%;
+  /* max-height: 840px; */
+  /* column-gap: 2.5rem; */
+  width: 800px;
+  height: 795px;
+  background: white;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
+    0px 15px 35px 0px rgba(43, 64, 78, 0.1);
+  border-radius: 6px;
+}
+
+/* checkout info part */
+.checkout-container {
+  padding-inline-start: 48px;
+  padding-inline-end: 48px;
+  padding-block-start: 41px;
+  padding-block-end: 46.9px;
+}
+.checkout-title {
+  color: #1d2c3c;
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 161px;
+  height: 54px;
+  margin-bottom: 9px;
+}
+
+#freelancer-line {
+  border: 1px solid #fff;
+  padding-inline-start: 44px;
+  padding-inline-end: 44px;
+  opacity: 0.2005;
+  /* width: unset; */
+}
+
+#checkout-line {
+  border: 1px solid #f5f7fa;
+  margin-inline-start: -48px;
+  margin-inline-end: -96px;
+  width: unset;
+}
+
+.checkout-basic-info ol,
+.checkout-payment-info ol {
+  list-style: none;
+  padding: 0;
+}
+
+.checkout-basic-info ol li,
+.checkout-payment-info ol li {
+  margin-left: 20px;
+  margin-top: 0px;
+  position: relative;
+}
+
+.checkout-basic-info ol li::before,
+.checkout-payment-info ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #548bc5;
+  background-color: none;
+  color: #548bc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.checkout-basic-info ol li:nth-child(1)::before {
+  content: "1";
+}
+
+.checkout-payment-info ol li:nth-child(1)::before {
+  content: "2";
+}
+.basic-info-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0px;
+}
+
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 7px;
+  align-items: end;
+  margin-top: 0;
+}
+label {
+  height: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+label#label-email {
+  margin-bottom: 7px;
+}
+
+input {
+  color: #646e7a;
+}
+label + label {
+  margin-block-start: unset;
+}
+input.input {
+  width: 100%;
+  border-radius: 5px;
+  background: #edeff2;
+  height: 36px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding-inline-start: 13px;
+  padding-block-start: 9px;
+  padding-block-end: 10px;
+}
+
+.checkout-payment-info ol li {
+  margin-block-start: 35px;
+  margin-block-end: 27px;
+}
+
+input#email.input {
+  margin-bottom: 41px;
+}
+
+label#credit-card-title {
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+#credit-card-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+input#card-number {
+  flex-grow: 2;
+  width: 60%;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#cvc,
+#expiry-date {
+  flex-grow: 1;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  text-align: center;
+}
+
+#expiry-date {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  width: 20%;
+}
+#cvc {
+  padding-right: 5px;
+  width: 20%;
+}
+
+.page-container li {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input#button {
+  border-radius: 5px;
+  background: #038e7d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.396px;
+  text-align: center;
+  height: 52px;
+  margin-bottom: 24px;
+}
+
+.checkout-form-footer ul {
+  list-style: none;
+}
+
+.checkout-form-footer ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #646e7a;
+  text-align: center;
+  padding-left: 20px;
+  background-image: url("/media/QMark.svg");
+  background-size: 20px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.checkout-form-footer ul li span {
+  font-weight: 700;
+  color: #1d2c3c;
+}
+
+.checkout-form-footer img {
+  width: 92px;
+  height: 20.101px;
+  flex-shrink: 0;
+}
+
+/* Freelancer Part */
+.freelancer-container {
+  border-radius: 0px 6px 6px 0px;
+  background: #1179bf;
+  color: #fff;
+  padding-inline-start: 46px;
+  padding-inline-end: 39px;
+  padding-block-start: 42px;
+  padding-block-end: min-content;
+  margin-bottom: 36px;
+  /* max-width: 312px; */
+}
+
+.freelancer-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.freelancer-cost {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 25px 1fr 1fr;
+  gap: 0px 0px;
+  align-content: start;
+  align-items: start;
+  max-width: 185px;
+  grid-template-areas:
+    "a b c"
+    "a b c"
+    "a b c";
+}
+
+span.cost-sign {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.015px;
+  grid-area: a;
+  align-self: center;
+}
+
+span.cost-amount {
+  font-size: 60px;
+  font-weight: 300;
+  grid-area: b;
+  align-self: center;
+}
+
+span.cost-term-duration {
+  font-size: 18px;
+  font-weight: 700;
+  grid-area: c;
+  align-self: center;
+}
+
+.service-renewal-text {
+  color: white;
+  font-size: 16px;
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  max-width: 185px;
+}
+
+.freelancer-services ul {
+  list-style: none;
+  margin-inline-start: 0;
+  margin-top: 36px;
+}
+
+.freelancer-services ul li {
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 40px;
+  background-image: url("/media/tick.svg");
+  background-size: 20px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+.freelancer-services > ul > li > span {
+  font-weight: 700;
+}
+
+.freelancer-help {
+  height: 50px;
+  margin-bottom: 42px;
+}
+
+.freelancer-help > p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.freelancer-help > p > span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.freelancer-help > p.help-link {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.freelancer-help > p > a > span {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.testimonies > p.testimony-text {
+  font-size: 18px;
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin-bottom: 27px;
+}
+
+.testimonies > p.testimony-text > span {
+  font-size: 18px;
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 700;
+}
+
+div.avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url("/media/avatar-kirk.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+p.avatar-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: center;
+  padding-block-start: 33px;
+  padding-block-end: 139px;
+  position: relative;
+}
+/* Define all font styling for the page */
+
+/* Define mobile layout */
+
+@media screen and (min-width: 600px) {
+  #mobile-nav-dropdown {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container ul {
+    display: none;
+  }
+
+  #mobile-nav-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    border: 1px solid #1d2c3c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nav-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-content: end; */
+    flex-wrap: wrap;
+  }
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    /* padding: 20px; */
+    height: auto;
+  }
+
+  .checkout-container,
+  .freelancer-container {
+    width: 100%;
+    /* margin-bottom: 20px; */
+  }
+
+  .page-container {
+    padding: 0;
+    max-width: 1440px;
+    height: 100%;
+  }
+
+  .page-footer {
+    display: flex;
+    position: relative;
+  }
+
+  #credit-card-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input#card-number {
+    width: 100%;
+  }
+
+  #cvc,
+  #expiry-date {
+    text-align: left;
+  }
+
+  #expiry-date {
+    width: 100%;
+  }
+  #cvc {
+    width: 100%;
+  }
+}
