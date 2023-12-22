@@ -514,6 +514,11 @@ p.avatar-name {
   padding-block-end: 139px;
   position: relative;
 }
+
+.page-footer footer a{
+    color: #31708F;
+}
+
 /* Define all font styling for the page */
 
 /* Define mobile layout */
@@ -569,12 +574,6 @@ p.avatar-name {
   .page-footer {
     display: flex;
     position: relative;
-  }
-
-  .page-footer footer>a{
-    display: flex;
-    position: relative;
-    colour: #31708F;
   }
 
   #credit-card-info {
