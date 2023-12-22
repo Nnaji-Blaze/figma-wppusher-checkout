@@ -571,6 +571,12 @@ p.avatar-name {
     position: relative;
   }
 
+  .page-footer footer>a{
+    display: flex;
+    position: relative;
+    colour: #31708F;
+  }
+
   #credit-card-info {
     display: flex;
     flex-direction: column;
